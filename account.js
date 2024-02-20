@@ -1,32 +1,6 @@
 const { DynamoDB, DynamoDBClient } = require('@aws-sdk/client-dynamodb');
 const { DynamoDBDocumentClient, QueryCommand, GetCommand, PutCommand } = require("@aws-sdk/lib-dynamodb");
-const http = require('http')
-const PORT = 3000;
 
-const server = http.createServer((req, res) => {
-    if (req.method === "POST" && req.url === "/register") {
-        // POST ENDPOINT
-        let body = "";
-        req.on("data", (chunk) => {
-            body += chunk;
-        });
-
-        req.on("end", async () => {
-            const data = JSON.parse(body);
-            const notAvailable = await exists(data.username);
-            if(notAvailable){
-                res.writeHead(201, { "Content-Type": "application/json" });
-                res.end(JSON.stringify({ message: "Username already exists" }));
-            } else {
-                registerAcc(data.username, data.password);
-                // this is where you would save the data
-                console.log(data);
-                res.writeHead(201, { "Content-Type": "application/json" });
-                res.end(JSON.stringify({ message: "Account Created Successfully!" }));
-            }
-        })
-    }
-})
 
 const client = new DynamoDBClient({ region: "us-east-1" })
 
@@ -72,7 +46,9 @@ async function registerAcc(name, password) {
         console.log("before response")
         const response = await documentClient.send(putCommand);
         console.log(response)
-        return response;
+        return true; // Created
+    }else{
+        return false; // Error
     }
 }
 
@@ -95,6 +71,7 @@ async function login(name, password) {
 }
 // login("elen", "dog")
 
-server.listen(PORT, () => {
-    console.log(`Server is listening on http://localhost:${PORT}`);
-})
+module.exports = {
+    registerAcc,
+    login
+}
