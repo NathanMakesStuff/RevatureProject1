@@ -73,13 +73,13 @@ async function login(name, password) {
     })
 
     try {
-        const promise_created = await documentClient.send(getCommand);
-        if (promise_created.Item.username == name && promise_created.Item.password == password) {
+        const loginData = await documentClient.send(getCommand);
+        if (loginData.Item.username == name && loginData.Item.password == password) {
             console.log("Logged in")
-            return promise_created.Item;
+            return loginData.Item;
         } else {
             console.log("Wrong info")
-            return false;
+            return null;
         }
         
     } catch (error) {

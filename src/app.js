@@ -58,7 +58,7 @@
 const express = require("express");
 const app = express();
 const accountRouter = require("./controller/accountRouter");
-// const ticketRouter = require("./controller/ticketRouter");
+const ticketRouter = require("./controller/ticketRouter");
 
 app.use(express.json());
 
@@ -74,7 +74,7 @@ const PORT = 3000;
 app.use("/account", accountRouter);
 // app.use("/register", accountRouter);
 // app.use("/login", accountRouter);
-// app.use("/tickets", ticketRouter);
+app.use("/tickets", ticketRouter);
 
 
 app.listen(PORT, () => {
