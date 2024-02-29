@@ -1,6 +1,7 @@
 const express = require("express")
 const router = express.Router();
 
+const accountService = require("../service/accountService");
 const ticketService = require("../service/ticketService");
 
 router.post("/submit", async (req, res) => {
@@ -14,7 +15,7 @@ router.post("/submit", async (req, res) => {
     }
 });
 
-router.get("/tickets", async (req, res) => {
+router.get("/", accountService.authenticateToken, async (req, res) => {
     const ticketQuery = req.query.ticketID; // get ticket by ID
     const employeeTicketsQuery = req.query.username;
     if (ticketQuery) { // should return single ticket if requested by that user/manager
