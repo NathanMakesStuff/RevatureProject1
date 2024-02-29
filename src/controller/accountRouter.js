@@ -7,7 +7,7 @@ router.post("/register", async (req, res) => {
     const data = await accountService.register(req.body);
     console.log(data);
     if (data) {
-        res.status(201).json({ message: "Created Account", data });
+        res.status(201).json({ message: `Created Account: ${req.body.username}`, data });
     } else {
         res
             .status(400)
