@@ -1,0 +1,113 @@
+2024-02-23T11:40:54.473Z [info]: Incoming POST : /register
+2024-02-23T11:41:05.045Z [info]: Incoming POST : /account/register
+2024-02-23T11:41:05.504Z [error]: Pass options.removeUndefinedValues=true to remove undefined values from map/array/set.
+2024-02-23T11:41:20.764Z [info]: Incoming POST : /account/register
+2024-02-23T11:41:20.865Z [error]: Pass options.removeUndefinedValues=true to remove undefined values from map/array/set.
+2024-02-23T11:41:32.455Z [info]: Incoming POST : /account/login
+2024-02-23T11:41:32.554Z [error]: Pass options.removeUndefinedValues=true to remove undefined values from map/array/set.
+2024-02-23T11:41:53.801Z [info]: Incoming POST : /account/register
+2024-02-23T11:41:53.901Z [error]: Pass options.removeUndefinedValues=true to remove undefined values from map/array/set.
+2024-02-23T11:43:52.200Z [info]: Incoming POST : /account/register
+2024-02-23T11:43:52.632Z [error]: Pass options.removeUndefinedValues=true to remove undefined values from map/array/set.
+2024-02-23T11:43:58.830Z [info]: Incoming POST : /account/register
+2024-02-23T11:43:59.376Z [error]: Cannot read properties of undefined (reading 'name')
+2024-02-23T11:43:59.378Z [error]: Pass options.removeUndefinedValues=true to remove undefined values from map/array/set.
+2024-02-23T11:44:53.148Z [info]: Incoming POST : /account/register
+2024-02-23T11:44:53.618Z [error]: Cannot read properties of undefined (reading 'username')
+2024-02-23T11:44:53.619Z [error]: Pass options.removeUndefinedValues=true to remove undefined values from map/array/set.
+2024-02-23T11:46:22.298Z [info]: Incoming POST : /account/register
+2024-02-23T11:46:22.795Z [error]: Pass options.removeUndefinedValues=true to remove undefined values from map/array/set.
+2024-02-23T11:46:27.694Z [info]: Incoming POST : /account/register
+2024-02-23T11:46:27.798Z [error]: Pass options.removeUndefinedValues=true to remove undefined values from map/array/set.
+2024-02-23T11:47:00.314Z [info]: Incoming POST : /account/register
+2024-02-23T11:47:00.915Z [error]: One or more parameter values were invalid: Type mismatch for key username expected: S actual: M
+2024-02-23T11:48:30.397Z [info]: Incoming POST : /account/register
+2024-02-23T11:48:30.964Z [error]: One or more parameter values were invalid: Type mismatch for key username expected: S actual: M
+2024-02-23T11:49:49.808Z [info]: Incoming POST : /account/register
+2024-02-23T11:49:50.289Z [error]: One or more parameter values were invalid: Type mismatch for key username expected: S actual: M
+2024-02-23T11:52:35.423Z [info]: Incoming POST : /account/register
+2024-02-23T11:52:35.933Z [error]: [object Object]
+2024-02-23T11:52:46.375Z [info]: Incoming POST : /account/login
+2024-02-23T11:52:46.579Z [error]: One or more parameter values were invalid: Type mismatch for key username expected: S actual: M
+2024-02-23T11:52:58.996Z [info]: Incoming POST : /account/register
+2024-02-23T11:52:59.135Z [error]: [object Object]
+2024-02-23T11:53:02.234Z [info]: Incoming POST : /account/register
+2024-02-23T11:53:02.330Z [error]: [object Object]
+2024-02-23T11:53:52.997Z [info]: Incoming POST : /account/register
+2024-02-23T11:53:59.915Z [info]: Incoming POST : /account/register
+2024-02-23T11:54:00.051Z [error]: [object Object]
+2024-02-23T11:55:42.656Z [info]: Incoming POST : /account/register
+2024-02-23T11:55:43.029Z [error]: Username already exists
+2024-02-23T15:14:16.415Z [info]: Incoming POST : /register
+2024-02-23T15:14:26.726Z [info]: Incoming POST : /account/register
+2024-02-23T15:14:45.727Z [info]: Incoming POST : /account/register
+2024-02-23T15:14:55.648Z [info]: Incoming POST : /account/register
+2024-02-23T15:14:56.126Z [error]: Username already exists
+2024-02-23T16:48:41.567Z [info]: Incoming POST : /account/register
+2024-02-23T16:48:41.971Z [error]: Username already exists
+2024-02-23T16:48:50.529Z [info]: Incoming POST : /account/login
+2024-02-23T16:53:15.001Z [info]: Incoming POST : /account/login
+2024-02-23T16:53:15.507Z [error]: Cannot read properties of undefined (reading 'username')
+2024-02-23T16:54:41.070Z [info]: Incoming POST : /account/login
+2024-02-23T16:54:55.276Z [info]: Incoming POST : /account/login
+2024-02-23T16:54:55.387Z [error]: Cannot read properties of undefined (reading 'username')
+2024-02-23T16:55:00.940Z [info]: Incoming POST : /account/login
+2024-02-23T16:55:01.041Z [error]: Cannot read properties of undefined (reading 'username')
+2024-02-23T16:55:16.245Z [info]: Incoming POST : /account/login
+2024-02-26T15:04:03.188Z [info]: Incoming POST : /account/register
+2024-02-26T15:06:02.172Z [info]: Incoming POST : /account/register
+2024-02-26T15:06:02.584Z [error]: Username already exists
+2024-02-26T15:06:19.155Z [info]: Incoming POST : /login
+2024-02-26T15:06:44.882Z [info]: Incoming POST : /account/login
+2024-02-26T15:11:43.392Z [info]: Incoming POST : /account/register
+2024-02-26T15:11:43.768Z [error]: Username already exists
+2024-02-26T15:11:50.269Z [info]: Incoming POST : /account/register
+2024-02-26T15:13:05.137Z [info]: Incoming POST : /account/register
+2024-02-26T15:13:05.530Z [error]: Username already exists
+2024-02-26T15:13:12.507Z [info]: Incoming POST : /account/register
+2024-02-26T15:13:20.659Z [info]: Incoming POST : /account/login
+2024-02-26T15:13:26.184Z [info]: Incoming POST : /account/login
+2024-02-26T15:13:26.283Z [error]: Cannot read properties of undefined (reading 'username')
+2024-02-26T15:17:32.455Z [info]: Incoming POST : /account/register
+2024-02-26T15:17:47.553Z [info]: Incoming POST : /account/login
+2024-02-26T15:18:34.609Z [info]: Incoming POST : /account/register
+2024-02-26T15:18:42.574Z [info]: Incoming POST : /account/login
+2024-02-26T15:21:11.655Z [info]: Incoming POST : /account/login
+2024-02-26T15:21:28.464Z [info]: Incoming POST : /account/register
+2024-02-26T15:21:38.382Z [info]: Incoming POST : /account/login
+2024-02-26T15:25:40.891Z [info]: Incoming POST : /account/login
+2024-02-26T15:26:00.624Z [info]: Incoming POST : /account/login
+2024-02-26T15:27:51.043Z [info]: Incoming POST : /account/register
+2024-02-26T15:28:04.037Z [info]: Incoming POST : /account/login
+2024-02-26T15:28:41.408Z [info]: Incoming POST : /account/register
+2024-02-26T15:28:58.122Z [info]: Incoming POST : /account/login
+2024-02-26T15:29:39.863Z [info]: Incoming POST : /account/register
+2024-02-26T15:32:10.342Z [info]: Incoming POST : /account/register
+2024-02-26T15:33:54.042Z [info]: Incoming POST : /account/register
+2024-02-26T15:34:31.281Z [info]: Incoming POST : /account/register
+2024-02-26T15:35:24.305Z [info]: Incoming POST : /account/register
+2024-02-26T15:35:49.414Z [info]: Incoming POST : /account/register
+2024-02-26T15:37:06.365Z [info]: Incoming POST : /account/register
+2024-02-26T15:37:39.338Z [info]: Incoming POST : /account/register
+2024-02-26T15:38:01.355Z [info]: Incoming POST : /account/register
+2024-02-26T15:38:17.805Z [info]: Incoming POST : /account/register
+2024-02-26T15:39:38.420Z [info]: Incoming POST : /account/register
+2024-02-26T15:39:38.803Z [error]: Username already exists
+2024-02-26T15:39:58.686Z [info]: Incoming POST : /account/register
+2024-02-26T15:40:21.250Z [info]: Incoming POST : /account/register
+2024-02-26T15:40:21.668Z [error]: Username already exists
+2024-02-26T15:40:28.501Z [info]: Incoming POST : /account/register
+2024-02-26T15:41:01.071Z [info]: Incoming POST : /account/register
+2024-02-26T15:42:08.713Z [info]: Incoming POST : /account/register
+2024-02-26T15:42:36.766Z [info]: Incoming POST : /account/register
+2024-02-26T15:43:16.727Z [info]: Incoming POST : /account/register
+2024-02-26T15:44:27.063Z [info]: Incoming POST : /account/register
+2024-02-26T15:45:15.867Z [info]: Incoming POST : /account/login
+2024-02-26T15:45:28.742Z [info]: Incoming POST : /account/login
+2024-02-26T15:45:28.844Z [error]: Cannot read properties of undefined (reading 'username')
+2024-02-26T15:45:57.411Z [info]: Incoming POST : /account/login
+2024-02-26T15:45:57.505Z [error]: Cannot read properties of undefined (reading 'username')
+2024-02-26T15:46:13.018Z [info]: Incoming POST : /account/login
+2024-02-26T15:46:13.113Z [error]: Cannot read properties of undefined (reading 'username')
+2024-02-26T15:46:20.943Z [info]: Incoming POST : /account/login
+2024-02-26T15:47:25.916Z [info]: Incoming POST : /account/login
