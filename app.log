@@ -111,3 +111,24 @@
 2024-02-26T15:46:13.113Z [error]: Cannot read properties of undefined (reading 'username')
 2024-02-26T15:46:20.943Z [info]: Incoming POST : /account/login
 2024-02-26T15:47:25.916Z [info]: Incoming POST : /account/login
+2024-02-29T18:57:30.496Z [info]: Incoming POST : /account/register
+2024-02-29T18:57:30.942Z [error]: Username already exists
+2024-02-29T18:57:47.784Z [info]: Incoming POST : /account/register
+2024-02-29T19:01:36.043Z [info]: Incoming POST : /account/register
+2024-02-29T19:01:36.435Z [error]: Username already exists
+2024-02-29T19:02:07.442Z [info]: Incoming POST : /account/register
+2024-02-29T19:02:07.689Z [error]: Unsupported type passed: ()=>{
+        if(body.role){
+            return body.role
+        }else return "Employee"
+    }. Pass options.convertClassInstanceToMap=true to marshall typeof object as map attribute.
+2024-02-29T19:05:02.080Z [info]: Incoming POST : /account/register
+2024-02-29T19:05:02.454Z [error]: Unsupported type passed: ()=>{return "Employee"}. Pass options.convertClassInstanceToMap=true to marshall typeof object as map attribute.
+2024-02-29T19:06:10.018Z [info]: Incoming POST : /account/register
+2024-02-29T19:06:10.409Z [error]: Unsupported type passed: ()=>{return "Employee"}. Pass options.convertClassInstanceToMap=true to marshall typeof object as map attribute.
+2024-02-29T19:09:41.204Z [info]: Incoming POST : /account/register
+2024-02-29T19:09:41.586Z [error]: Unsupported type passed: () =>{return "Employee"}. Pass options.convertClassInstanceToMap=true to marshall typeof object as map attribute.
+2024-02-29T19:11:23.895Z [info]: Incoming POST : /account/register
+2024-02-29T19:11:57.760Z [info]: Incoming POST : /account/login
+2024-02-29T19:12:28.258Z [info]: Incoming POST : /account/register
+2024-02-29T19:12:50.178Z [info]: Incoming POST : /account/login

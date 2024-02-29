@@ -1,16 +1,22 @@
 const accountDAO = require("../repo/accountDAO");
 
 async function register(body) {
-    if(body.role){
-        const account = await accountDAO.registerAcc(body.username, body.password, body.role);
-        if (account) {
-            return account;
-        } 
-    } else {
-        const account = await accountDAO.registerAcc(body.username, body.password, "Employee");
+    // if(body.role){
+    //     const account = await accountDAO.registerAcc(body.username, body.password, body.role);
+    //     if (account) {
+    //         return account;
+    //     } 
+    // } else {
+    //     const account = await accountDAO.registerAcc(body.username, body.password, "Employee");
         
-            return account;
+    //         return account;
         
+    // }
+
+    const account = await accountDAO.registerAcc(body.username, body.password, 
+        body.role = body.role || "Employee");
+    if (account) {
+        return account;
     }
 }
 
