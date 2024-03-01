@@ -4,15 +4,21 @@ const router = express.Router();
 const accountService = require("../service/accountService");
 
 router.post("/register", async (req, res) => {
-    const data = await accountService.register(req.body);
-    console.log(data);
-    if (data) {
-        res.status(201).json({ message: `Created Account: ${req.body.username}`, data });
+    if(req.body.password && req.body.username.split(' ').join('')) {
+        const data = await accountService.register(req.body);
+        if (data) {
+            res.status(201).json({ message: `Created Account: ${req.body.username}`, data });
+        } else {
+            res
+                .status(400)
+                .json({ message: "Account was not created. Username in use", receivedData: req.body });
+        }
     } else {
         res
             .status(400)
-            .json({ message: "Account was not created", receivedData: req.body });
+            .json({ message: "Account was not created. There must be a password and username", receivedData: req.body });
     }
+    
 });
 
 router.post("/login", async (req, res) => {
@@ -25,6 +31,7 @@ router.post("/login", async (req, res) => {
             .json({ message: "Invalid Login", receivedData: req.body });
     }
 });
+
 
 
 module.exports = router;

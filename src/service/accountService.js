@@ -29,6 +29,7 @@ async function login(body) {
     return null;
 }
 
+
 function authenticateToken(req, res, next) {
     const authHeader = req.headers["authorization"];
     const token = authHeader && authHeader.split(" ")[1];
@@ -43,13 +44,21 @@ function authenticateToken(req, res, next) {
             res.status(403).json({ message: "Forbidden Access" });
             return;
         }
-        req.user = user;
+        req.username = user;
         next();
     });
+}
+
+function loggedInUser(req) {
+    const authHeader = req.headers["authorization"];
+    const token = authHeader && authHeader.split(" ")[1];
+    let user = jwt.verify(token, secretKey);
+    return user.username;
 }
 
 module.exports = {
     register,
     login,
-    authenticateToken
+    authenticateToken,
+    loggedInUser
 }
