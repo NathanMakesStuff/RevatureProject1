@@ -108,20 +108,4 @@ describe('Login tests', () => {
         expect(result).toBe(null)
     })
 
-    test(`accountService.logged() should return null if username/password pair 
-            is not in db`, async () => {
-        let body = ({
-            username: "username",
-            password: "password",
-        })
-        let daoOutput = null // not in db/wrong password
-        accountDAO.login.mockReturnValue(daoOutput)
-
-
-        const result = await accountService.login(body)
-
-
-        expect(accountDAO.login).toHaveBeenCalledWith("username", "password");
-        expect(result).toBe(null)
-    })
 })

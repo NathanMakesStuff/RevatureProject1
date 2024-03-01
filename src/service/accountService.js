@@ -53,7 +53,7 @@ function loggedInUser(req) {
     const authHeader = req.headers["authorization"];
     const token = authHeader && authHeader.split(" ")[1];
     let user = jwt.verify(token, secretKey);
-    return user.username;
+    return user;
 }
 
 module.exports = {
