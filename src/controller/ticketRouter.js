@@ -15,14 +15,11 @@ router.post("/", accountService.authenticateToken, async (req, res) => {
 });
 
 router.get("/", accountService.authenticateToken, async (req, res) => {
-    // const ticketQuery = req.query.ticketID; // get ticket by ID
     const pending = req.query.status === 'pending'
-    const employeeTicketsQuery = req.query.username;
     if(pending){
         const data = await ticketService.getPending();
         res.status(200).json({ message: "Getting all pending tickets", data })
     } else {
-        // const data = await ticketService.getAllTickets();
         res.status(400).json({ message: "Bad Request" })
     }
     

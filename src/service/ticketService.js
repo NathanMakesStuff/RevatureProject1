@@ -2,14 +2,6 @@ const ticketDAO = require("../repo/ticketDAO")
 const uuid = require('uuid')
 
 async function getMyTickets(username) {
-    // if (ticketQuery) { // should return single ticket if requested by that user/manager
-    //     const ticket = await ticketService.getTicketByID(ticketQuery);
-    //     res.status(200).json({ message: `Retrieved ticket by ticketID ${ticketQuery}`, ticket })
-    // } else if (employeeTicketsQuery) { //should return all tickets from specific username if requested by user/manager
-    //     const tickets = await ticketService.getTicketByUName(employeeTicketsQuery);
-    //     res.status(200).json({ message: `Retrieved tickets by username ${employeeTicketsQuery}`, tickets })
-    // }
-    // // should return all tickets that specific account has access to. Reverts back to TicketByUName if not manager
     const items = await ticketDAO.getMyTickets(username);
     return items
 }
@@ -52,13 +44,11 @@ async function processTicket(status, ticketID) {
         status: status,
         ticketID: ticketID
     }
-    console.log("processing tickets")
     const updatedTicket = await ticketDAO.updateTicket(statusID);
     return updatedTicket.Attributes;
 }
 
 async function getPending() {
-    console.log("pending")
     const items = await ticketDAO.getPending()
     return items
 }
