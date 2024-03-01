@@ -15,8 +15,9 @@ router.post("/", accountService.authenticateToken, async (req, res) => {
 });
 
 router.get("/", accountService.authenticateToken, async (req, res) => {
+    const user = accountService.loggedInUser(req);
     const pending = req.query.status === 'pending'
-    if(pending){
+    if (pending && user.role == "Manager"){
         const data = await ticketService.getPending();
         res.status(200).json({ message: "Getting all pending tickets", data })
     } else {
