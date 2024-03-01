@@ -75,7 +75,7 @@ async function login(name, password) {
     try {
         const loginData = await documentClient.send(getCommand);
         if (loginData.Item.username == name && loginData.Item.password == password) {
-            console.log("Logged in")
+            console.log(loginData.Item)
             return loginData.Item;
         } else {
             console.log("Wrong info")
@@ -86,7 +86,6 @@ async function login(name, password) {
         logger.error(error);
     }
 }
-// login("elen", "dog")
 
 module.exports = {
     registerAcc,

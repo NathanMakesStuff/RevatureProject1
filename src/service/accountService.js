@@ -4,23 +4,11 @@ const jwt = require("jsonwebtoken")
 const secretKey = "asdjsahdsajkdashj"
 
 async function register(body) {
-    // if(body.role){
-    //     const account = await accountDAO.registerAcc(body.username, body.password, body.role);
-    //     if (account) {
-    //         return account;
-    //     } 
-    // } else {
-    //     const account = await accountDAO.registerAcc(body.username, body.password, "Employee");
-        
-    //         return account;
-        
-    // }
 
-    const account = await accountDAO.registerAcc(body.username, body.password, 
-        body.role = body.role || "Employee");
-    if (account) {
-        return account;
-    }
+    const account = await accountDAO.registerAcc(body.username, body.password,
+        body.role = body.role || "Employee"); //Optional assignment of role. Default role Employee
+
+    return account;
 }
 
 async function login(body) {
@@ -28,16 +16,16 @@ async function login(body) {
     if (account) {
         const token = jwt.sign(
             {
-                username: account.username,
-                role: account.role
+                username: `${account.username}`,
+                role: `${account.role}`
             },
             secretKey,
             {
-                expiresIn: "15m",   
+                expiresIn: "15m",
             }
         )
         return token;
-    } 
+    }
     return null;
 }
 
