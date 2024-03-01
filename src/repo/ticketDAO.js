@@ -10,7 +10,7 @@ const documentClient = DynamoDBDocumentClient.from(client);
 
 async function getAllTickets() {
     const scanCommand = new ScanCommand({
-        TableName: 'Tickets',
+        TableName: 'Tickets'
     })
 
     try {
@@ -22,7 +22,26 @@ async function getAllTickets() {
     }
 }
 
+async function submitTicket(ticket) {
+    const putCommand = new PutCommand({
+        TableName: 'Tickets',
+        Item: ticket
+    })
+
+    try {
+        const response = await documentClient.send(putCommand);
+        console.log(response)
+        return response;
+        
+    } catch (error) {
+        logger.error(error)
+        return null
+    }
+    
+}
+
 
 module.exports = {
-    getAllTickets
+    getAllTickets,
+    submitTicket
 }

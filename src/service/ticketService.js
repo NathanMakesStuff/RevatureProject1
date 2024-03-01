@@ -1,4 +1,5 @@
 const ticketDAO = require("../repo/ticketDAO")
+const uuid = require('uuid')
 
 async function getAllTickets() {
     // if (ticketQuery) { // should return single ticket if requested by that user/manager
@@ -13,6 +14,35 @@ async function getAllTickets() {
     return items
 }
 
+async function submitTicket(data, username) {
+    
+    if (parseFloat(data.amount) && data.description.split(' ').join('')) {
+        const ticket = {
+            ticket_id: uuid.v4(),
+            author: username,
+            description: data.description,
+            type: data.type,
+            amount: data.amount,
+            status: "pending"
+        } 
+        console.log(ticket)
+        
+        const response = await ticketDAO.submitTicket(ticket)
+        if(response){
+
+            return {status: 201, message:`Ticket: ${ticket.ticket_id} by ${ticket.author} has been submitted`}
+        }
+    } else {
+
+        const error = {
+            status: 400,
+            message: "Failed to post. Must have amount and description" 
+        }
+        return error
+    }
+}
+
 module.exports = {
-    getAllTickets
+    getAllTickets,
+    submitTicket
 }
